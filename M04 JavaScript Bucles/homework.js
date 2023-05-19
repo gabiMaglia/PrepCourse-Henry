@@ -154,21 +154,22 @@ function esPrimo(num) {
   // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
   // [Nota]: los números negativos, 0 y 1 NO son números primos.
   // Tu código:
-  //   if (num < 2) {
-  //     return false;
-  //   } else {
-  //     for (let i = 0; i < num; i++) {
-  //       if i
-  //     }
-  //   }
+  if (num > 1) {
+    for (let i = 2; i < num - 1; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  } else {
+    return false;
+  }
 }
-
 function esVerdadero(valor) {
   // Si "valor" es verdadero retornar "Soy verdadero".
   // Caso contrario, retornar "Soy falso".
   // Tu código:
-
-  valor === true ? "Soy verdadero" : "Soy falso";
+  return valor === true ? "Soy verdadero" : "Soy falso";
 }
 
 function tieneTresDigitos(num) {
@@ -176,7 +177,7 @@ function tieneTresDigitos(num) {
   // Caso contrario, retornar false.
   // Tu código:
   const numString = num.toString();
-  let numArr = [];
+  return numString.length === 3;
 }
 
 function doWhile(num) {
